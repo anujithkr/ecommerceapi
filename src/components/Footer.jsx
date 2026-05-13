@@ -1,77 +1,68 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Container, Row, Col } from 'react-bootstrap'
 
 function Footer() {
   return (
-   <>
-   <div className='d-flex justify-content-center align-items-center bg-primary' 
-   style={{height:'250px',width:'100%'}}>
+    <footer className="mt-5 glass-panel mx-3 mb-3 border-0 overflow-hidden">
+      <div style={{ background: 'linear-gradient(to bottom, rgba(14, 165, 233, 0.05), transparent)' }}>
+        <Container>
+          <Row className="py-5 gy-4">
+            <Col lg={4} md={6} className="text-center text-md-start">
+              <Link to={'/'} className="d-flex align-items-center text-decoration-none mb-4 justify-content-center justify-content-md-start">
+                <i className="fa-solid fa-cart-shopping primary-gradient fs-4 me-3"></i>
+                <span className="text-white fw-bold fs-3" style={{ letterSpacing: '2px' }}>EKART</span>
+              </Link>
+              <p className="text-muted small lh-lg" style={{ maxWidth: '300px' }}>
+                Your destination for next-generation shopping. Discover curated excellence and unparalleled tech-lifestyle integration.
+              </p>
+              <div className="d-flex justify-content-center justify-content-md-start gap-4 fs-5 mt-4">
+                <i className="fa-brands fa-instagram text-primary hover-glow cursor-pointer"></i>
+                <i className="fa-brands fa-x-twitter text-primary hover-glow cursor-pointer"></i>
+                <i className="fa-brands fa-discord text-primary hover-glow cursor-pointer"></i>
+                <i className="fa-brands fa-github text-primary hover-glow cursor-pointer"></i>
+              </div>
+            </Col>
+            
+            <Col lg={2} md={6} className="text-center text-md-start">
+               <h6 className="text-white fw-bold mb-4 tracking-widest small">PLATFORM</h6>
+               <ul className="list-unstyled text-muted small d-flex flex-column gap-2">
+                  <li><Link to={'/'} className="text-decoration-none text-muted hover-glow">Marketplace</Link></li>
+                  <li><Link to={'/wishlist'} className="text-decoration-none text-muted hover-glow">Wishlist</Link></li>
+                  <li><Link to={'/cart'} className="text-decoration-none text-muted hover-glow">My Cart</Link></li>
+                  <li className="hover-glow cursor-pointer">Member Portal</li>
+               </ul>
+            </Col>
 
-    <div className='d-flex justify-content-center align-items-evenly'>
-      {/* first division */}
-
-      <div className='overview' style={{width:'400px'}}>
-        <Link style={{textDecoration:'none',color:'white'}} to={'/'} ><i class="fa-solid fa-cart-shopping fa-bounce me-2 text-warning"></i> <span
-        style={{color:'white',fontWeight:'700px'}}> Ekart</span></Link>
-        <p style={{color:'white',textAlign:'justify'}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ut natus nam ipsa vero aspernatur ullam aliquid rerum, quasi reiciendis distinctio repellendus obcaecati sequi deleniti blanditiis? Natus quo et repellendus.</p>
-
+            <Col lg={2} md={6} className="text-center text-md-start">
+               <h6 className="text-white fw-bold mb-4 tracking-widest small">RESOURCES</h6>
+               <ul className="list-unstyled text-muted small d-flex flex-column gap-2">
+                  <li className="hover-glow cursor-pointer">Documentation</li>
+                  <li className="hover-glow cursor-pointer">Guides & API</li>
+                  <li className="hover-glow cursor-pointer">Legal Center</li>
+                  <li className="hover-glow cursor-pointer">Support Hub</li>
+               </ul>
+            </Col>
+            
+            <Col lg={4} md={6} className="text-center text-md-end">
+              <h6 className="text-white fw-bold mb-3 tracking-widest small">STAY CONNECTED</h6>
+              <p className="text-muted small mb-4">Join our elite circle for early access and tech insights.</p>
+              <div className="d-flex glass-panel p-1" style={{ borderRadius: '50px' }}>
+                <input type="email" className="bg-transparent border-0 text-white py-2 px-4 w-100" placeholder="your@email.com" style={{ outline: 'none', fontSize: '0.85rem' }} />
+                <button className="premium-btn py-2 px-4">JOIN</button>
+              </div>
+            </Col>
+          </Row>
+          <div className="border-top border-white border-opacity-5 py-4 text-center">
+            <p className="text-white-50 small mb-0" style={{ letterSpacing: '2px' }}>
+              &copy; 2026 EKART ECOSYSTEM. BUILT WITH INNOVATION.
+            </p>
+          </div>
+        </Container>
       </div>
-      {/* second division */}
-      <div className='links d-flex flex-column ms-3' style={{color:'white'}}>
-                <h4>LINKS</h4>
-                  <Link to={'/'} style={{textDecoration:'none',color:'white'}}>
-                    HOME
-                  </Link>
-                
-                  <Link to={'/cart'} style={{textDecoration:'none',color:'white'}}>
-                    CART
-                  </Link>
-                  
-                  <Link to={'/wishlist'} style={{textDecoration:'none',color:'white'}}>
-                    WISHLIST
-                  </Link>
-              </div>
-
-                   {/* third division */}
-                   <div className='links d-flex flex-column ms-5' style={{color:'white'}}>
-                <h4>GUIDES</h4>
-                  REACT
-                  <br />
-                  REACT BOOSTRAP
-                  <br />
-                  FONT AWESOME
-              </div>
-
-
-                {/* fourth division */}
-                <div className="contact_us ms-3" style={{color:'white'}}>
-                <h4>CONTACT US</h4>
-                <div className='d-flex'>
-                  <input type="text" placeholder='Enter your Email' className='form-control' />
-                  <button className='btn btn-warning ms-3'>SUBSCRIBE</button>
-                </div>
-
-                <div className='d-flex justify-content-evenly align-item-center mt-3'>
-                  <i class="fa-brands fa-instagram fa-2x"></i>
-                  <i class="fa-brands fa-reddit fa-2x"></i>
-                  <i class="fa-brands fa-x-twitter fa-2x"></i>
-                  <i class="fa-brands fa-whatsapp fa-2x"></i>
-                </div>
-              </div>
-
-
-
-
-    </div>
-   </div>
-
-   <p className='text-center mt-5'>Copy right &#169; 2025 eKart BUILT WITH REACT</p>
-
-
-
-  
-   </>
+    </footer>
   )
 }
 
 export default Footer
+
